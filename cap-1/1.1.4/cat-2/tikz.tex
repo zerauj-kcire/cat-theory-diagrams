@@ -1,0 +1,42 @@
+\documentclass[tikz]{standalone}
+\usetikzlibrary{arrows.meta}
+\begin{document}
+
+\begin{tikzpicture}[-latex, arrows={-Triangle[angle=20:5pt,scale=1.5]}]
+
+	\node (A) at (0,0) {};
+	\node (B) at (0,-3) {};
+	\node (C) at (3,0) {};
+	\node (D) at (3,-3) {};
+	\foreach \n in {A,...,D} \fill (\n) circle (2pt);
+	\draw (A) to node [left] {\(f\)} (B);
+	\draw (B) to node [above] {\(g\)} (C);
+	\draw (C) to node [right] {\(h\)} (D);
+
+	\begin{scope}[xshift=5cm]
+		\node (A) at (0,0) {};
+		\node (B) at (0,-3) {};
+		\node (C) at (3,0) {};
+		\node (D) at (3,-3) {};
+		\foreach \n in {A,...,D} \fill (\n) circle (2pt);
+		\draw (A) to node [left] {\(f\)} (B);
+		\draw (B) to node [above] {\(g\)} (C);
+		\draw (C) to node [right] {\(h\)} (D);
+		\draw (A) to node [above] {\(g \circ f\)} (C);
+		\draw (B) to node [below] {\(h \circ g\)} (D);
+	\end{scope}
+
+	\begin{scope}[xshift=10cm]
+		\node (A) at (0,0) {};
+		\node (B) at (0,-3) {};
+		\node (C) at (3,0) {};
+		\node (D) at (3,-3) {};
+		\foreach \n in {A,...,D} \fill (\n) circle (2pt);
+		\draw (A) to node [left] {\(f\)} (B);
+		\draw (C) to node [right] {\(h\)} (D);
+		\draw (A) to node [above] {\(g \circ f\)} (C);
+		\draw (B) to node [below] {\(h \circ g\)} (D);
+	\end{scope}
+\end{tikzpicture}
+
+\end{document}

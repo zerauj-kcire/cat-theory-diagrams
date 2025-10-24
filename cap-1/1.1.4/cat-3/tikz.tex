@@ -1,0 +1,17 @@
+\documentclass[tikz]{standalone}
+\usetikzlibrary{arrows.meta}
+\begin{document}
+
+\begin{tikzpicture}[-latex, arrows={-Triangle[angle=20:5pt,scale=1.5]}]
+	\node (A) at (0,0) {};
+	\node (B) at (3,0) {};
+	\node (C) at (3,-3) {};
+	\fill (A) circle (2pt) node [left] {\(Dom(g \circ f) = Dom(f)\)};
+	\fill (B) circle (2pt);
+	\fill (C) circle (2pt);
+	\draw (A) to node [above] {\(f\)} (B);
+	\draw (B) to node [right] {\(g\)} (C);
+	\draw (A) to node [below left] {\(g \circ f\)} (C);
+\end{tikzpicture}
+
+\end{document}

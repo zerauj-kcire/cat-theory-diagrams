@@ -1,0 +1,20 @@
+\documentclass[tikz]{standalone}
+\usetikzlibrary{arrows.meta}
+\begin{document}
+
+\begin{tikzpicture}[yscale=-1,-latex, arrows={-Triangle[angle=20:5pt,scale=1.5]}]
+	\draw (0,0) node [left] {\(| \mathbf{C} |\)}  
+	-- node [above] {\(U\)} (3,0) 
+	node [right] {\(\overrightarrow{\mathbf{C}}\)};
+	\begin{scope}[yshift=4cm]
+		\node (A) at (0,0) {\(X\)};
+		\node (B) at (3,0) {\(X\)};
+		\node (C) at (3,-3) {};
+		\fill (C) circle (2pt);
+		\draw (A) to node [below] {\(1_X\)} (B);
+		\draw (C) to node [right] {\(f\)} (B);
+		\draw (C) to node [above left] {\(f\)} (A);
+	\end{scope}
+\end{tikzpicture}
+
+\end{document}
