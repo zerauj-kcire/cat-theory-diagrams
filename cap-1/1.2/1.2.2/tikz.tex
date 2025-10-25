@@ -1,0 +1,27 @@
+\documentclass[tikz]{standalone}
+\usetikzlibrary{arrows.meta}
+\begin{document}
+
+\begin{tikzpicture}[-latex, arrows={-Triangle[angle=20:5pt,scale=1.5]}]
+	\node (A1) at (3,0) {\(A\)};
+	\node (A2) at (0,-3) {\(A\)};
+	\node (B) at (3,-3) {\(B\)};
+	\node (C) at (0,0) {\(C\)};
+
+	\draw (A1) to node [right] {\(f\)} (B);
+	\draw (A2) to node [below] {\(f\)} (B);
+	\draw (C) to node [above] {\(u\)} (A1);
+	\draw (C) to node [left] {\(v\)} (A2);
+
+	\begin{scope}[xshift=6cm]
+		\node (A1) at (3,0) {\(A\)};
+		\node (A2) at (0,-3) {\(A\)};
+		\node (C) at (0,0) {\(C\)};
+
+		\draw (C) to node [above] {\(u\)} (A1);
+		\draw (C) to node [left] {\(v\)} (A2);
+		\draw (A1) to node [below right] {\(1_A\)} (A2);
+	\end{scope}
+\end{tikzpicture}
+
+\end{document}
