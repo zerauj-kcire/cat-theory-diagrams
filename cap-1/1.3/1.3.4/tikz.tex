@@ -1,0 +1,71 @@
+\documentclass[tikz]{standalone}
+\usetikzlibrary{arrows.meta}
+\begin{document}
+
+\begin{tikzpicture}[rotate=180,-latex, arrows={Triangle[angle=20:5pt,scale=1.5]-}]
+	\node (X) at (0,0) {};
+	\node (A1) at (3,0) {\(A\)};
+	\node (A2) at (0,-3) {\(A\)};
+	\node (C) at (3,-3) {\(C\)};
+	\fill (X) circle (2pt);
+	\draw (X) to node [below] {\(u\)} (A1);
+	\draw (X) to node [right] {\(v\)} (A2);
+	\draw (A1) to node [left] {\(h\)} (C);
+	\draw (A2) to node [above] {\(h\)} (C);
+\end{tikzpicture}
+
+\begin{tikzpicture}[rotate=180,-latex, arrows={Triangle[angle=20:5pt,scale=1.5]-}]
+	\node (X) at (0,0) {};
+	\node (A1) at (3,0) {\(A\)};
+	\node (A2) at (0,-3) {\(A\)};
+	\node (C) at (3,-3) {\(C\)};
+	\node (B1) at (4.5,-1.5) {\(B\)};
+	\node (B2) at (1.5,-4.5) {\(B\)};
+	\fill (X) circle (2pt);
+	\draw (X) to node [below] {\(u\)} (A1);
+	\draw (X) to node [right] {\(v\)} (A2);
+	\draw (A1) to node [right] {\(h\)} (C);
+	\draw (A2) to node [below] {\(h\)} (C);
+	\draw (A1) to node [below left] {\(f\)} (B1);
+	\draw (A2) to node [above right] {\(f\)} (B2);
+	\draw (B1) to node [above left] {\(g\)} (C);
+	\draw (B2) to node [above left] {\(g\)} (C);
+\end{tikzpicture}
+
+\begin{tikzpicture}[rotate=180,-latex, arrows={Triangle[angle=20:5pt,scale=1.5]-}]
+	\node (X) at (0,0) {};
+	\node (A1) at (3,0) {\(A\)};
+	\node (A2) at (0,-3) {\(A\)};
+	\node (B1) at (4.5,-1.5) {\(B\)};
+	\node (B2) at (1.5,-4.5) {\(B\)};
+	\fill (X) circle (2pt);
+	\draw (X) to node [below] {\(u\)} (A1);
+	\draw (X) to node [right] {\(v\)} (A2);
+	\draw (A1) to node [below left] {\(f\)} (B1);
+	\draw (A2) to node [above right] {\(f\)} (B2);
+	\draw (B1) to node [above left] {\(1_B\)} (B2);
+\end{tikzpicture}
+
+\begin{tikzpicture}[rotate=180,-latex, arrows={Triangle[angle=20:5pt,scale=1.5]-}]
+	\node (X) at (0,0) {};
+	\node (A1) at (3,0) {\(A\)};
+	\node (A2) at (0,-3) {\(A\)};
+	\node (B) at (3,-3) {\(B\)};
+	\fill (X) circle (2pt);
+	\draw (X) to node [below] {\(u\)} (A1);
+	\draw (X) to node [right] {\(v\)} (A2);
+	\draw (A1) to node [left] {\(f\)} (B);
+	\draw (A2) to node [above] {\(f\)} (B);
+\end{tikzpicture}
+
+\begin{tikzpicture}[rotate=180,-latex, arrows={Triangle[angle=20:5pt,scale=1.5]-}]
+	\node (X) at (0,0) {};
+	\node (A1) at (3,0) {\(A\)};
+	\node (A2) at (0,-3) {\(A\)};
+	\fill (X) circle (2pt);
+	\draw (X) to node [below] {\(u\)} (A1);
+	\draw (X) to node [right] {\(v\)} (A2);
+	\draw (A1) to node [above left] {\(1_A\)} (A2);
+\end{tikzpicture}
+
+\end{document}

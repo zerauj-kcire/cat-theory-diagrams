@@ -1,0 +1,87 @@
+\documentclass[tikz]{standalone}
+\usetikzlibrary{arrows.meta}
+\begin{document}
+
+\begin{tikzpicture}[rotate=180,-latex, arrows={Triangle[angle=20:5pt,scale=1.5]-}]
+	\node (X) at (0,0) {};
+	\node (A1) at (3,0) {\(A\)};
+	\node (A2) at (0,-3) {\(A\)};
+	\node (B) at (3,-3) {\(B\)};
+	\fill (X) circle (2pt);
+	\draw (X) to node [below] {\(u\)} (A1);
+	\draw (X) to node [right] {\(v\)} (A2);
+	\draw (A1) to node [left] {\(f\)} (B);
+	\draw (A2) to node [above] {\(f\)} (B);
+\end{tikzpicture}
+
+\begin{tikzpicture}[rotate=180,-latex, arrows={Triangle[angle=20:5pt,scale=1.5]-}]
+	\node (X) at (0,0) {};
+	\node (A1) at (3,0) {\(A\)};
+	\node (A2) at (0,-3) {\(A\)};
+	\node (B) at (3,-3) {\(B\)};
+	\node (C) at (5,-5) {\(C\)};
+	\fill (X) circle (2pt);
+	\draw (X) to node [below] {\(u\)} (A1);
+	\draw (X) to node [right] {\(v\)} (A2);
+	\draw (A1) to node [left] {\(f\)} (B);
+	\draw (A2) to node [above] {\(f\)} (B);
+	\draw (B) to node [below left] {\(g\)} (C);
+\end{tikzpicture}
+
+\begin{tikzpicture}[scale=0.7,rotate=180,-latex, arrows={Triangle[angle=20:5pt,scale=1.5]-}]
+	\node (X) at (0,0) {};
+	\node (A1) at (3,0) {\(A\)};
+	\node (A2) at (0,-3) {\(A\)};
+	\node (B1) at (6,0) {\(B\)};
+	\node (B2) at (0,-6) {\(B\)};
+	\node (C) at (6,-6) {\(C\)};
+	\fill (X) circle (2pt);
+	\draw (X) to node [below] {\(u\)} (A1);
+	\draw (X) to node [right] {\(v\)} (A2);
+	\draw (A1) to node [below] {\(f\)} (B1);
+	\draw (A2) to node [right] {\(f\)} (B2);
+	\draw (B1) to node [left] {\(g\)} (C);
+	\draw (B2) to node [above] {\(g\)} (C);
+\end{tikzpicture}
+
+\begin{tikzpicture}[scale=0.7,rotate=180,-latex, arrows={Triangle[angle=20:5pt,scale=1.5]-}]
+	\node (X) at (0,0) {};
+	\node (A1) at (3,0) {\(A\)};
+	\node (A2) at (0,-3) {\(A\)};
+	\node (B1) at (6,0) {\(B\)};
+	\node (B2) at (0,-6) {\(B\)};
+	\node (C) at (6,-6) {\(C\)};
+	\fill (X) circle (2pt);
+	\draw (X) to node [below] {\(u\)} (A1);
+	\draw (X) to node [right] {\(v\)} (A2);
+	\draw (A1) to node [below] {\(f\)} (B1);
+	\draw (A2) to node [right] {\(f\)} (B2);
+	\draw (B1) to node [left] {\(g\)} (C);
+	\draw (B2) to node [above] {\(g\)} (C);
+	\draw (A1) to node [below left] {\(h\)} (C);
+	\draw (A2) to node [above right] {\(h\)} (C);
+\end{tikzpicture}
+
+\begin{tikzpicture}[rotate=180,-latex, arrows={Triangle[angle=20:5pt,scale=1.5]-}]
+	\node (X) at (0,0) {};
+	\node (A1) at (3,0) {\(A\)};
+	\node (A2) at (0,-3) {\(A\)};
+	\node (C) at (3,-3) {\(C\)};
+	\fill (X) circle (2pt);
+	\draw (X) to node [below] {\(u\)} (A1);
+	\draw (X) to node [right] {\(v\)} (A2);
+	\draw (A1) to node [left] {\(h\)} (C);
+	\draw (A2) to node [above] {\(h\)} (C);
+\end{tikzpicture}
+
+\begin{tikzpicture}[rotate=180,-latex, arrows={Triangle[angle=20:5pt,scale=1.5]-}]
+	\node (X) at (0,0) {};
+	\node (A1) at (3,0) {\(A\)};
+	\node (A2) at (0,-3) {\(A\)};
+	\fill (X) circle (2pt);
+	\draw (X) to node [below] {\(u\)} (A1);
+	\draw (X) to node [right] {\(v\)} (A2);
+	\draw (A1) to node [above left] {\(1_A\)} (A2);
+\end{tikzpicture}
+
+\end{document}
