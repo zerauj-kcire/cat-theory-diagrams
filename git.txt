@@ -1,0 +1,4 @@
+# https://github.com/settings/security
+# https://docs.github.com/en/get-started/git-basics/caching-your-github-credentials-in-git
+# https://github.com/cli/cli/blob/trunk/docs/install_linux.md#community-unofficial
+# https://gitscripts.com/git-push-using-username-and-password

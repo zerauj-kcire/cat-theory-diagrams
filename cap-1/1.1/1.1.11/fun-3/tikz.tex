@@ -1,0 +1,16 @@
+\documentclass[tikz]{standalone}
+\usetikzlibrary{arrows.meta}
+\begin{document}
+
+\begin{tikzpicture}[-latex, arrows={-Triangle[angle=20:5pt,scale=1.5]}]
+	\node (A) at (0,0) {\(| \mathbf{C}|\)};
+	\node (B) at (3,0) {\(\overrightarrow{\mathbf{C}}\)};
+	\node (C) at (0,-3) {\(| \mathbf{D}|\)};
+	\node (D) at (3,-3) {\(\overrightarrow{\mathbf{D}}\)};
+	\draw (A) to node [above] {\(1_ \mathbf{C}\)} (B);
+	\draw (A) to node [left] {\(F_1\)} (C);
+	\draw (B) to node [right] {\(F_2\)} (D);
+	\draw (C) to node [below] {\(1_ \mathbf{D}\)} (D);
+\end{tikzpicture}
+
+\end{document}

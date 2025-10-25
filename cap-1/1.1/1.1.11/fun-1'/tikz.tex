@@ -1,0 +1,14 @@
+\documentclass[tikz]{standalone}
+\usetikzlibrary{arrows.meta}
+\begin{document}
+
+\begin{tikzpicture}[-latex, arrows={-Triangle[angle=20:5pt,scale=1.5]}]
+	\node (X) at (0,0) {\(X\)};
+	\node (Y) at (0,-3) {\(Y\)};
+	\node (FX) at (3,0) {\(F_1(X)\)};
+	\node (FY) at (3,-3) {\(F_1(Y)\)};
+	\draw (X) to node [left] {\(f\)} (Y);
+	\draw (FX) to node [left] {\(F_2(f)\)} (FY);
+\end{tikzpicture}
+
+\end{document}
