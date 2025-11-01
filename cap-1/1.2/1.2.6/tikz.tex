@@ -1,0 +1,19 @@
+\documentclass[tikz]{standalone}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usetikzlibrary{arrows.meta}
+\begin{document}
+
+\begin{tikzpicture}[-latex, arrows={-Triangle[angle=20:5pt,scale=1.5]}]
+	\node (X) at (0,0) {\(X\)};
+	\node (Q1) at (3,0) {\(\mathbb{Q}\)};
+	\node (Q2) at (0,-3) {\(\mathbb{Q}\)};
+	\node (QZ) at (3,-3) {\(\mathbb{Q} / \mathbb{Z}\)};
+
+	\draw (X) to node [above] {\(f\)} (Q1);
+	\draw (X) to node [left] {\(g\)} (Q2);
+	\draw (Q1) to node [right] {\(h\)} (QZ);
+	\draw (Q2) to node [below] {\(h\)} (QZ);
+\end{tikzpicture}
+
+\end{document}
