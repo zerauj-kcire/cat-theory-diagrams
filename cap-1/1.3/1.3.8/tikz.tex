@@ -1,0 +1,19 @@
+\documentclass[tikz]{standalone}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usetikzlibrary{arrows.meta}
+\begin{document}
+
+\begin{tikzpicture}[-latex, arrows={-Triangle[angle=20:5pt,scale=1.5]}]
+	\node (N) at (0,0) {\(\mathbb{N}\)};
+	\node (Z1) at (3,0) {\(\mathbb{Z}\)};
+	\node (Z2) at (0,-3) {\(\mathbb{Z}\)};
+	\node (X) at (3,-3) {\(X\)};
+
+	\draw (N) to node [above] {\(i\)} (Z1);
+	\draw (N) to node [left] {\(i\)} (Z2);
+	\draw (Z1) to node [right] {\(f\)} (X);
+	\draw (Z2) to node [below] {\(g\)} (X);
+\end{tikzpicture}
+
+\end{document}
