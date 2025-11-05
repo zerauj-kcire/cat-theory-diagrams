@@ -61,4 +61,18 @@
 
 \end{tikzpicture}
 
+\begin{tikzpicture}[-latex, arrows={-Triangle[angle=20:5pt,scale=1.5]}]
+	\node (A1) at (0,0) {\(A\)};
+	\node (A2) at (4,0) {\(A\)};
+	\node (C1) at (0,-4) {\(C\)};
+	\node (C2) at (4,-4) {\(C\)};
+
+	\draw (A1) to node [above] {\(1_A\)} (A2);
+	\draw (C1) to node [above] {\(1_C\)} (C2);
+
+	\draw (A1) to node [left] {\(g \circ f\)} (C1);
+	\draw (A2) to node [right] {\(g \circ f\)} (C2);
+	\draw (C1) to node [above left] {\(f ^ {-1} \circ g ^ {-1}\)} (A2);
+\end{tikzpicture}
+
 \end{document}

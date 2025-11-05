@@ -1,0 +1,56 @@
+\documentclass[tikz]{standalone}
+\usetikzlibrary{arrows.meta}
+\begin{document}
+
+\begin{tikzpicture}[-latex, arrows={-Triangle[angle=20:5pt,scale=1.5]}]
+	\node (A1) at (0,-3) {\(A\)};
+	\node (A2) at (3,0) {\(A\)};
+	\node (B) at (3,-3) {\(B\)};
+	\node (C) at (0,0) {\(C\)};
+
+	\draw (C) to node [above] {\(\iota\)} (A2);
+	\draw (C) to node [left] {\(\iota\)} (A1);
+	\draw (A1) to node [below] {\(f\)} (B);
+	\draw (A2) to node [right] {\(g\)} (B);
+\end{tikzpicture}
+
+\begin{tikzpicture}[-latex, arrows={-Triangle[angle=20:5pt,scale=1.5]}]
+	\node (A1) at (0,-3) {\(A\)};
+	\node (A2) at (3,0) {\(A\)};
+	\node (B) at (3,-3) {\(B\)};
+	\node (D) at (0,0) {\(D\)};
+
+	\draw (D) to node [above] {\(h\)} (A2);
+	\draw (D) to node [left]  {\(h\)} (A1);
+	\draw (A1) to node [below] {\(f\)} (B);
+	\draw (A2) to node [right] {\(g\)} (B);
+\end{tikzpicture}
+
+\begin{tikzpicture}[-latex, arrows={-Triangle[angle=20:5pt,scale=1.5]}]
+	\node (C) at (0,0) {\(C\)};
+	\node (D) at (0,-3) {\(D\)};
+	\node (A) at (3,0) {\(A\)};
+
+	\draw (C) to node [above] {\(\iota\)} (A);
+	\draw (D) to node [left] {\(k\)} (C);
+	\draw (D) to node [below right] {\(h\)} (A);
+\end{tikzpicture}
+
+\begin{tikzpicture}[-latex, arrows={-Triangle[angle=20:5pt,scale=1.5]}]
+	\node (A1) at (0,-3) {\(A\)};
+	\node (A2) at (3,0) {\(A\)};
+	\node (B) at (3,-3) {\(B\)};
+	\node (C) at (0,0) {\(C\)};
+	\node (D) at (-2,2) {\(D\)};
+
+	\draw (C) to node [above] {\(\iota\)} (A2);
+	\draw (C) to node [left] {\(\iota\)} (A1);
+	\draw (A1) to node [below] {\(f\)} (B);
+	\draw (A2) to node [right] {\(g\)} (B);
+
+	\draw (D) to node [above right] {\(k\)} (C);
+	\draw (D) to [out=-90 , in=130] node [left] {\(h\)} (A1);
+	\draw (D) to [out=0 , in=140] node [above] {\(h\)} (A2);
+\end{tikzpicture}
+
+\end{document}

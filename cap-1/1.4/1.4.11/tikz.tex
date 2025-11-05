@@ -1,0 +1,63 @@
+\documentclass[tikz]{standalone}
+\usetikzlibrary{arrows.meta}
+\begin{document}
+
+\begin{tikzpicture}[rotate=180,-latex, arrows={Triangle[angle=20:5pt,scale=1.5]-}]
+	\node (A1) at (3,0) {\(B\)};
+	\node (A2) at (0,-3) {\(B\)};
+	\node (B) at (3,-3) {\(A\)};
+	\node (C) at (0,0) {\(C'\)};
+
+	\draw (A1) to node [left] {\(f\)} (B);
+	\draw (A2) to node [above] {\(f\)} (B);
+	\draw (C) to node [below] {\(u\)} (A1);
+	\draw (C) to node [right] {\(v\)} (A2);
+\end{tikzpicture}
+
+\begin{tikzpicture}[rotate=180,-latex, arrows={Triangle[angle=20:5pt,scale=1.5]-}]
+	\node (A1) at (3,0) {\(B\)};
+	\node (A2) at (0,-3) {\(B\)};
+	\node (C) at (0,0) {\(C\)};
+
+	\draw (C) to node [below] {\(u\)} (A1);
+	\draw (C) to node [right] {\(v\)} (A2);
+	\draw (A1) to node [above left] {\(1_A\)} (A2);
+\end{tikzpicture}
+
+\begin{tikzpicture}[-latex, arrows={-Triangle[angle=20:5pt,scale=1.5]}]
+	\node (A1) at (3,0) {\(A\)};
+	\node (A2) at (0,-3) {\(A\)};
+	\node (B) at (3,-3) {\(B\)};
+	\node (C) at (0,0) {\(C'\)};
+
+	\draw (A1) to node [right] {\(f\)} (B);
+	\draw (A2) to node [below] {\(f\)} (B);
+	\draw (C) to node [above] {\(a\)} (A1);
+	\draw (C) to node [left] {\(b\)} (A2);
+\end{tikzpicture}
+
+\begin{tikzpicture}[-latex, arrows={-Triangle[angle=20:5pt,scale=1.5]}]
+	\node (A1) at (3,0) {\(A\)};
+	\node (A2) at (0,-3) {\(A\)};
+	\node (C) at (0,0) {\(C'\)};
+
+	\draw (C) to node [above] {\(a\)} (A1);
+	\draw (C) to node [left] {\(b\)} (A2);
+	\draw (A1) to node [below right] {\(1_A\)} (A2);
+\end{tikzpicture}
+
+\begin{tikzpicture}[-latex, arrows={-Triangle[angle=20:5pt,scale=1.5]}]
+	\node (A1) at (0,0) {\(A\)};
+	\node (A2) at (3,0) {\(A\)};
+	\node (B1) at (0,-3) {\(B\)};
+	\node (B2) at (3,-3) {\(B\)};
+
+	\draw (A1) to node [left] {\(f\)} (B1);
+	\draw (A2) to node [left] {\(f\)} (B2);
+	\draw (B1) to node [above] {\(g\)} (A2);
+
+	\draw (A1) to node [above] {\(1_A\)} (A2);
+	\draw (B1) to node [above] {\(1_B\)} (B2);
+\end{tikzpicture}
+
+\end{document}
