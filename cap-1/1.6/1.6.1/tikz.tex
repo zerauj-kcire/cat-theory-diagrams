@@ -1,5 +1,6 @@
 \documentclass[tikz]{standalone}
 \usetikzlibrary{arrows.meta}
+\usetikzlibrary{patterns.meta}
 \begin{document}
 
 \begin{tikzpicture}[rotate=180,-latex, arrows={Triangle[angle=20:5pt,scale=1.5]-}]
@@ -48,7 +49,7 @@
 	\draw (A1) to node [above] {\(f\)} (B);
 	\draw (A2) to node [left] {\(g\)} (B);
 
-	\draw (D) to node [below left] {\(k\)} (C);
+	\draw [dash pattern = on 6pt off 2pt] (D) to node [below left] {\(k\)} (C);
 	\draw (D) to [out=-90 , in=130] node [right] {\(h\)} (A1);
 	\draw (D) to [out=0 , in=140] node [below] {\(h\)} (A2);
 \end{tikzpicture}
