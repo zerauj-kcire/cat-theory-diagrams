@@ -1,0 +1,37 @@
+\documentclass[tikz]{standalone}
+\usetikzlibrary{arrows.meta}
+\usetikzlibrary{decorations.pathmorphing}
+\begin{document}
+
+\begin{tikzpicture}[-latex, arrows={-Triangle[angle=20:5pt,scale=1.5]}, scale=1.5]
+	\node (X) at (0,0) {\(X\)};
+	\node (Y) at (4,0) {\(Y\)};
+	\node (W) at (2,-1.5) {\(W\)};
+
+	\draw (X) to node [above] {\(f\)} (Y);
+	\draw (X) to node [below left] {\(h\)} (W);
+	\draw (W) to node [below right] {\(k\)} (Y);
+\end{tikzpicture}
+
+\begin{tikzpicture}[-latex, arrows={-Triangle[angle=20:5pt,scale=1.5]}, scale=1.5]
+	\node (X) at (0,0) {\(X\)};
+	\node (Y) at (4,0) {\(Y\)};
+	\node (W) at (2,-1.5) {\(W\)};
+
+	\draw (X) to node [above] {\(f\)} (Y);
+	\draw (W) to node [below right] {\(k\)} (Y);
+	\draw [decorate, decoration={coil}] 
+	(W) to node [above right] {\(h ^ {-1}\)} (X);
+\end{tikzpicture}
+
+\begin{tikzpicture}[-latex, arrows={-Triangle[angle=20:5pt,scale=1.5]}, scale=1.5]
+	\node (X) at (0,0) {\(X\)};
+	\node (Y) at (4,0) {\(Y\)};
+	\node (W) at (2,-1.5) {\(W\)};
+
+	\draw (X) to node [above] {\(f\)} (Y);
+	\draw (W) to node [below right] {\(k\)} (Y);
+	\draw (W) to node [above right] {\(h ^ {-1}\)} (X);
+\end{tikzpicture}
+
+\end{document}

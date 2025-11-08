@@ -1,0 +1,38 @@
+\documentclass[tikz]{standalone}
+\usepackage{amsmath}
+\usetikzlibrary{arrows.meta}
+\begin{document}
+
+\begin{tikzpicture}[-latex, arrows={-Triangle[angle=20:5pt,scale=1.5]}, scale=1.5]
+	\node (A) at (0,0) {\(A\)};
+	\node (C) at (4,0) {\(C\)};
+	\node (B) at (2,-1.5) {\(B\)};
+
+	\draw (A) to node [above] {\(h\)} (C);
+	\draw (A) to node [below left] {\(f\)} (B);
+	\draw (B) to node [below right] {\(g\)} (C);
+
+	\fill (3,-2.25) circle (1.5pt) (-1,0.75) circle (1.5pt);
+
+	\draw (-0.8,0.7) -- (-0.1,0.1);
+	\draw (-0.9,0.6) -- (-0.18,0.03);
+	\begin{scope}[shift={(3,-2.25)}]
+		\draw (-0.8,0.7) -- (-0.1,0.1);
+		\draw (-0.9,0.6) -- (-0.18,0.03);
+	\end{scope}
+\end{tikzpicture}
+
+
+\begin{tikzpicture}[-latex, arrows={-Triangle[angle=20:5pt,scale=1.5]}, scale=1.5]
+	\node (A) at (0,0) {\(A\)};
+	\node (C) at (4,0) {\(C\)};
+	\node (B) at (2,-1.5) {\(B\)};
+
+	\draw (A) to node [above] {\(h\)} (C);
+	\draw [{Triangle[angle=20:5pt,scale=1.5]}-{Triangle[angle=20:5pt,scale=1.5]}] 
+	(A) to node [below left] {\(f\)} 
+	node [above right] {\(f ^ {-1}\)} (B);
+	\draw (B) to node [below right] {\(g\)} (C);
+\end{tikzpicture}
+
+\end{document}

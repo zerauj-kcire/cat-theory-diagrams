@@ -1,0 +1,14 @@
+\documentclass[tikz]{standalone}
+\usetikzlibrary{arrows.meta}
+\begin{document}
+
+\begin{tikzpicture}[-latex, arrows={-Triangle[angle=20:5pt,scale=1.5]},scale=1.5]
+	\node (A) at (0,0) {\(A\)};
+	\node (C1) at (4,0) {\(C\)};
+	\node (C2) at (2,-1.5) {\(C\)};
+	\draw (A) to node [above] {\(h\)} (C1);
+	\draw (A) to node [below left] {\(h\)} (C2);
+	\draw (C2) to node [below right] {\(1_C\)} (C1);
+\end{tikzpicture}
+
+\end{document}

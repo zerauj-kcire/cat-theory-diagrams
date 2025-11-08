@@ -1,0 +1,70 @@
+\documentclass[tikz]{standalone}
+\usepackage{amsmath}
+\usetikzlibrary{arrows.meta}
+\begin{document}
+
+\begin{tikzpicture}[-latex, arrows={-Triangle[angle=20:5pt,scale=1.5]}, scale=1.5]
+	\node (A) at (0,0) {\(A\)};
+	\node (C) at (4,0) {\(C\)};
+	\node (B) at (2,-1.5) {\(B\)};
+
+	\draw (A) to node [above] {\(h\)} (C);
+	\draw (A) to node [below left] {\(f\)} (B);
+	\draw (B) to node [below right] {\(g\)} (C);
+\end{tikzpicture}
+
+\begin{tikzpicture}[-latex, arrows={-Triangle[angle=20:5pt,scale=1.5]}]
+	\node (D) at (0,0) {\(D\)};
+	\node (A1) at (3,0) {\(A\)};
+	\node (A2) at (0,-3) {\(A\)};
+	\node (B) at (3,-3) {\(B\)};
+
+	\draw (D) to node [above] {\(a\)} (A1);
+	\draw (D) to node [left] {\(b\)} (A2);
+	\draw (A1) to node [right] {\(f\)} (B);
+	\draw (A2) to node [below] {\(f\)} (B);
+	\node at (4.5,-1.5) {\(\;\implies\;\) };
+	\begin{scope}[xshift=6cm]
+		\node (D) at (0,0) {\(D\)};
+		\node (A1) at (3,0) {\(A\)};
+		\node (A2) at (0,-3) {\(A\)};
+		\draw (D) to node [above] {\(a\)} (A1);
+		\draw (D) to node [left] {\(b\)} (A2);
+		\draw (A1) to node [below right] {\(1_A\)} (A2);
+	\end{scope}
+\end{tikzpicture}
+
+\begin{tikzpicture}[-latex, arrows={-Triangle[angle=20:5pt,scale=1.5]}]
+	\node (A) at (0,0) {\(A\)};
+	\node (B1) at (3,0) {\(B\)};
+	\node (B2) at (0,-3) {\(B\)};
+	\node (D) at (3,-3) {\(D\)};
+
+	\draw (A) to node [above] {\(f\)} (B1);
+	\draw (A) to node [left] {\(f\)} (B2);
+	\draw (B1) to node [right] {\(a\)} (D);
+	\draw (B2) to node [below] {\(b\)} (D);
+	\node at (4.5,-1.5) {\(\;\implies\;\)};
+	\begin{scope}[xshift=6cm]
+		\node (B1) at (3,0) {\(B\)};
+		\node (B2) at (0,-3) {\(B\)};
+		\node (D) at (3,-3) {\(D\)};
+		\draw (B1) to node [right] {\(a\)} (D);
+		\draw (B2) to node [below] {\(b\)} (D);
+		\draw (B1) to node [above left] {\(1_B\)} (B2);
+	\end{scope}
+\end{tikzpicture}
+
+\begin{tikzpicture}[-latex, arrows={-Triangle[angle=20:5pt,scale=1.5]}, scale=1.5]
+	\node (A) at (0,0) {\(A\)};
+	\node (C) at (4,0) {\(C\)};
+	\node (B) at (2,-1.5) {\(B\)};
+
+	\draw (A) to node [above] {\(h\)} (C);
+	\draw [{Triangle[angle=20:5pt,scale=1.5]}-{Triangle[angle=20:5pt,scale=1.5]}] 
+	(A) to node [below left] {\(f\)} 
+	node [above right] {\(f ^ {-1}\)} (B);
+	\draw (B) to node [below right] {\(g\)} (C);
+\end{tikzpicture}
+
+\end{document}

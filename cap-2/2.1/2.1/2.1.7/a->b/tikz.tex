@@ -1,18 +1,15 @@
 \documentclass[tikz]{standalone}
-\usepackage{amsmath}
-\usepackage{amssymb}
 \usetikzlibrary{arrows.meta}
-\usetikzlibrary{decorations.pathmorphing}
 \begin{document}
 
 \begin{tikzpicture}[-latex, arrows={-Triangle[angle=20:5pt,scale=1.5]}, scale=1.5]
 	\node (X) at (0,0) {\((X, \tau)\)};
-	\node (Y) at (3,0) {\((Y, \sigma)\)};
-	\node (Z) at (1.5,-1.5) {\((Z, \rho)\)};
+	\node (Y) at (4,0) {\((Y, \sigma)\)};
+	\node (FX) at (2,-1.5) {\((f[X] , \sigma _{f[X]})\)};
 
 	\draw (X) to node [above] {\(f\)} (Y);
-	% \draw (Z) to node [below left] {\(g\)} (X);
-	\draw (Z) to node [below right] {\(f \circ g\)} (Y);
+	\draw (X) to node [below left] {\(f'\)} (FX);
+	\draw (FX) to node [below right] {\(\iota\)} (Y);
 \end{tikzpicture}
 
 \end{document}
