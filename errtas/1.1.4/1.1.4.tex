@@ -1,0 +1,64 @@
+\documentclass[landscape]{slides}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{mathrsfs}
+\usepackage{color}
+\begin{document}
+\begin{tabular}{r|p{0.7 \linewidth}}
+	\textbf{Número:} &  1.1.4. \\ 
+	\textbf{Ubicación:} & Pág. 4. Sección 1.1. \\ 
+	\textbf{Texto:} & 
+	\begin{enumerate}
+		\item[\textbf{(Cat2)}] Si \(f,g,h \in \overrightarrow{\mathscr{C}}\),
+			tales que
+			\[
+				cod(f) = dom(g) \;,\; cod(g) = dom(h),
+			\]
+			entonces \textcolor{red}{\(h \circ (g \circ f) = (h \circ g) \circ f\).}
+		\item[\textcolor{red}{\textbf{(Cat3)}}] 
+			Si \(f,g \in \overrightarrow{\mathscr{C}}\),
+			son tales que \(cod(f) = dom(g)\), entonces
+			\[
+				dom(g \circ f) = dom(f).
+			\]
+		\item[\textcolor{red}{\textbf{(Cat4)}}] 
+			Si \(f,g \in \overrightarrow{\mathscr{C}}\),
+			son tales que \(cod(f) = dom(g)\), entonces
+			\[
+				cod(g \circ f) = cod(g).
+			\]
+	\end{enumerate}
+	% hay que usar color ROJO para indicar la errata.
+\end{tabular}
+\newpage
+\begin{tabular}{r|p{0.7 \linewidth}}
+	\textbf{Explicación:} & Se requiere saber primero que si
+	\[
+		cod(g) = dom(h),
+	\]
+	entonces
+	\[
+		cod(g \circ f) = dom(h).
+	\] 
+	Para componer los \(3\) morfismos en \textbf{(Cat2)}.\\ 
+	\textbf{Sugerencia:} & 
+	\begin{enumerate}
+		\item[\textcolor{blue}{\textbf{(Cat2)}}] 
+			Si \(f,g \in \overrightarrow{\mathscr{C}}\),
+			son tales que \(cod(f) = dom(g)\), entonces
+			\textcolor{blue}{\(dom(g \circ f) = dom(f).\)}
+		\item[\textcolor{blue}{\textbf{(Cat3)}}] 
+			Si \(f,g \in \overrightarrow{\mathscr{C}}\),
+			son tales que \(cod(f) = dom(g)\), entonces
+			\textcolor{blue}{\(cod(g \circ f) = cod(g).\)}
+		\item[\textbf{(Cat4)}] Si \(f,g,h \in \overrightarrow{\mathscr{C}}\),
+			tales que
+			\[
+				cod(f) = dom(g) \;,\; cod(g) = dom(h),
+			\]
+			entonces \textcolor{blue}{\(h \circ (g \circ f) = (h \circ g) \circ f\).}
+	\end{enumerate}
+	% hay que usar color AZUL para indicar la errata.
+\end{tabular}
+
+\end{document}
